@@ -32,6 +32,10 @@ function addAccount() {
         emailInputReg.classList.add("is-invalid");
         paswordInputrReg.classList.add("is-invalid");
         nameInputReg.classList.add("is-invalid");
+        paswordInputrReg.classList.replace("d-block","d-none");
+        nameInputReg.classList.replace("d-block","d-none");
+        emailInputReg.classList.replace("d-block","d-none");
+
 
     }
     else {

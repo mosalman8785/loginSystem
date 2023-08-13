@@ -3,6 +3,9 @@ var LogEmail = document.getElementById("LoginEmail");
 var LogButton1 = document.querySelector(".Login-bUTT")
 var LogButton1Arr = document.querySelector(".LogButton1Arr");
 var WrongAlert = document.querySelector(".Login-wrong");
+var WrongAlert2 = document.querySelector(".Login-wrong2");
+var checkNullArray=document.getElementById("loginNOTFilled");
+
 
 
 var returned;
@@ -31,38 +34,55 @@ if (localStorage.getItem("all-Accounts") != null) {
 // }
 
 function PassAndEmailExist() {
-    var SuccessAlert = document.querySelector(".Login-success")
-    for (var i = 0; i < loginArray.length; i++) {
-        if (loginArray[i].emailRg == LogEmail.value && loginArray[i].passwordRg == LogPassword.value) {
-
-            SuccessAlert.classList.replace("d-none", "d-block");
-            WrongAlert.classList.replace("d-block", "d-none");
-            var returnName = loginArray[i].nameRg;
-            localStorage.setItem("name returned",returnName);
-           
-            LogEmail.classList.add("is-valid");
-            LogEmail.classList.remove("is-invalid");
-            LogPassword.classList.add("is-valid");
-            LogPassword.classList.remove("is-invalid");
-            LogButton1Arr.setAttribute("href", "HomePage.html");
+if(localStorage.getItem("all-Accounts") == null){
+    checkNullArray.classList.replace("d-none","d-block");
+}
 
 
-            console.log(returnName);
-            break;
-
-        }
-        else {
-            LogButton1Arr.removeAttribute("href");
+   else{
+        if(LogPassword.value==""||LogEmail.value ==""){
+            WrongAlert2.classList.replace("d-none","d-block");
             LogEmail.classList.remove("is-valid");
             LogEmail.classList.add("is-invalid");
             LogPassword.classList.remove("is-valid");
             LogPassword.classList.add("is-invalid");
-            WrongAlert.classList.replace("d-none", "d-block");
-            SuccessAlert.classList.replace("d-block", "d-none");
-
-            continue;
         }
-
-    }
+        else{
+            WrongAlert2.classList.replace("d-block","d-none");
+            var SuccessAlert = document.querySelector(".Login-success")
+            for (var i = 0; i < loginArray.length; i++) {
+                if (loginArray[i].emailRg == LogEmail.value && loginArray[i].passwordRg == LogPassword.value) {
+        
+                    SuccessAlert.classList.replace("d-none", "d-block");
+                    WrongAlert.classList.replace("d-block", "d-none");
+                    var returnName = loginArray[i].nameRg;
+                    localStorage.setItem("name returned",returnName);
+                   
+                    LogEmail.classList.add("is-valid");
+                    LogEmail.classList.remove("is-invalid");
+                    LogPassword.classList.add("is-valid");
+                    LogPassword.classList.remove("is-invalid");
+                    LogButton1Arr.setAttribute("href", "HomePage.html");
+        
+        
+                    console.log(returnName);
+                    break;
+        
+                }
+                else {
+                    LogButton1Arr.removeAttribute("href");
+                    LogEmail.classList.remove("is-valid");
+                    LogEmail.classList.add("is-invalid");
+                    LogPassword.classList.remove("is-valid");
+                    LogPassword.classList.add("is-invalid");
+                    WrongAlert.classList.replace("d-none", "d-block");
+                    SuccessAlert.classList.replace("d-block", "d-none");
+        
+                    continue;
+                }
+        
+            }
+        }
+   }
 }
 LogButton1.addEventListener("click", PassAndEmailExist);
