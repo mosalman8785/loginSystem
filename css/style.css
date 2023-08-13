@@ -71,7 +71,7 @@ nav{
     height: 80vh;
 }
 .name-get-element{
-    font-size: 2.25rem;
-    font-weight: bolder;
+    font-size: 3rem;
+    font-weight: 400;
     color: var(--words-color);
 }
