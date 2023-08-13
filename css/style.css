@@ -1,0 +1,77 @@
+:root {
+    --bg-color: #24353F;
+    --words-color: #17A2B8;
+}
+
+body {
+
+
+    background-color: var(--bg-color);
+}
+
+h1 {
+    color: var(--words-color)
+}
+
+.center-div {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    background-color: var(--bg-color);
+
+}
+
+.form-control::-webkit-input-placeholder {
+    color: darkgrey;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+button.same {
+    border: 1px solid var(--words-color);
+    color: var(--words-color);
+}
+
+button.same:hover {
+    background-color: var(--words-color);
+    color: white;
+}
+
+button.same:focus {
+    background-color: var(--words-color) !important;
+    color: white !important;
+    border: 1px solid var(--words-color) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav-hi {
+    font-size: 2.5rem;
+}
+nav{
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    background-color: var(--bg-color);
+
+}
+.Name-get{
+   
+    height: 200px;
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    background-color: var(--bg-color);
+}
+.home-name{
+    height: 80vh;
+}
+.name-get-element{
+    font-size: 2.25rem;
+    font-weight: bolder;
+    color: var(--words-color);
+}

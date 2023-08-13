@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="./images/login.png">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- this code to prevent user form get back -->
+    <script>
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+
+
+    <div class=" ">
+        <div class="container">
+            <div class="row d-flex justify-content-center  py-5 mt-4">
+                <div class="col-lg-8 ">
+                    <div class=" center-div  ps-5  pe-5">
+                        <h1 class="text-center mt-5 pt-5">Smart Login System </h1>
+                        <div class=" pe-3 ps-3 ">
+
+                            <input type="email" class="form-control placeholder-glow bg-transparent text-white  mt-4"
+                                id="LoginEmail" placeholder="Enter your email ">
+                            <input type="password" class="form-control bg-transparent text-white mt-4"
+                                id="LoginPassword" placeholder="Enter your password">
+
+                            <a class="LogButton1Arr text-white text-decoration-none">
+                                <div class="d-grid gap-2 py-4">
+                                    <button class="btn btn-outline Login-bUTT same d-block" type="button">Login</button>
+                                </div>
+                            </a>
+
+                            <!-- <div class="d-grid gap-2 d-none py-4">
+                           <a  href="./HomePage.html"  class="btn btn-outline Login-bUTT " type="button">Login</a>
+                          </div> -->
+
+
+                            <div class="Login-wrong text-danger text-center d-none py-3">
+                                <p class="text-danger">Wrong! please wirte correct email and password</p>
+                            </div>
+                            <div class="Login-wrong2 text-danger text-center d-none py-3">
+                                <p class="text-danger">Wrong! Please , Write your Email and Password</p>
+                            </div>
+                            <div class="Login-success  text-center d-none py-3">
+                                <p class="text-success">Correct . wait....</p>
+                            </div>
+
+                        </div>
+                        <p class="text-white text-center pb-5">Don't have an account? <a class="text-white"
+                                href="./register.html">Sign Up</a></p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/loginMain.js"></script>
+
+</body>
+
+</html>

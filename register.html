@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" href="./images/website.png">
+    <link rel="stylesheet" href="./css/all.min.css">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <div class=" ">
+        <div class="container">
+            <div class="row d-flex justify-content-center  py-5 mt-4">
+                <div class="col-lg-8 ">
+                    <div class=" center-div  ps-5  pe-5">
+                        <h1 class="text-center mt-5 pt-5">Smart Login System </h1>
+                        <div class=" pe-3 ps-3 ">
+                            <input type="text" id="NameReg"
+                                class="form-control placeholder-glow bg-transparent text-white  mt-4"
+                                placeholder="Enter your name ">
+
+                            <input type="email" id="EmailReg"
+                                class="form-control placeholder-glow bg-transparent text-white  mt-4"
+                                placeholder="Enter your email ">
+                            <input type="password" id="PasswordReg" class="form-control bg-transparent text-white mt-4"
+                                placeholder="Enter your password">
+                            <div class="validate">
+                                <p class="text-danger allInputALert d-none mt-4 text-center">wrong! All inputs required
+                                </p>
+                                <p class="text-success SuccessAlert d-none  mt-4 text-center">Success</p>
+                                <p class="text-danger EmailAlert d-none  mt-4 ">
+                                    1. email should not contain any space or special characters(excep @ and .) <br>
+                                    2. email should not start with dot(.) or should not end with .(before @ symbot) <br>
+                                    3. two dots should not come near. <br>
+                                    4. @ symbol should not repeat. <br>
+                                </p>
+                                <p class="text-danger passwordALert d-none  mt-4 ">
+                                    1. Password must contain 8 characters and at least one number <br>
+                                    2. At least 1 character upperCase and one unique character such as !#$%&?
+                                </p>
+                                <p class="text-danger NameAlert d-none  mt-4 text-center">
+                                    Name must be at least 3 characters
+                                </p>
+                                <p class="text-danger email-exist d-none mt-4 text-center">Email exists already! </p>
+
+
+
+
+
+                            </div>
+
+                            <div class="d-grid gap-2 py-4">
+                                <button class="btn btn-outline reg-Btn same" type="button">Sign Up</button>
+                            </div>
+
+                        </div>
+                        <p class="text-white text-center pb-5">Don't have an account? <a class="text-white"
+                                href="./Login.html">Sign in</a></p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/RegisterMain2.js"></script>
+
+
+</body>
+
+</html>

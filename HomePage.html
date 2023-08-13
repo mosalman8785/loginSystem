@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="./images/bussiness-man.png">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- this code to prevent user form get back -->
+    <script>
+
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+
+    </script> 
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+    <header>
+        <nav>
+            <div class="container py-1">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-white nav-hi">Hi!</p>
+                    <a href="./Login.html"><button class="btn btn-outline-warning btn-lg">LogOut</button></a>
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+    <section class="d-flex align-items-center home-name  ">
+        <div class="container-fluid  ">
+            <div class="row  d-flex align-items-center justify-content-center">
+                <div class="col-lg-8 col-sm-12 ">
+                    <div class="Name-get w-100 d-flex align-items-center justify-content-center ">
+                        <p class="name-get-element">Welcome <span class="name-return"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/HomePage.js"></script>
+
+</body>
+
+</html>
